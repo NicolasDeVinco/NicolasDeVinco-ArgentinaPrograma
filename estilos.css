@@ -1,0 +1,436 @@
+/* ------- BODY ------------*/
+
+
+body {
+    display: grid;
+    grid-template-areas:
+    "header header nav"
+    "info empleos empleos"
+    "info estudios estudios"
+    "footer footer footer";
+    grid-template-columns: 30% 50% 20%;
+    grid-template-rows: 75px 1fr 1fr 200px; 
+    height: 100vh;
+    background-color: rgb(255, 241, 241);
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+  
+  
+  
+  /* ------- HEADER ------------*/
+  
+  .header__container {
+    grid-area: header;
+    border: 1px solid black;
+    border-right: none;
+    font-size: 30px;
+    background-color: rgb(126, 125, 125);
+  }
+  
+  
+  h1 {
+    margin-top: 0;
+    text-align: center;
+    letter-spacing: 0.25em;
+  }
+  
+  h1.linea {
+    position: relative;
+    z-index: 1;
+  }
+  
+  h1.linea:before {
+    border-top: 8px solid #020202;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 95%;
+    z-index: -1;
+  }
+  
+  h1.linea span {
+    background-color: rgb(126, 125, 125);
+    padding: 0 15px 0 20px;
+  }
+  
+  
+  
+  /* ------- NAV ------------*/
+  
+  .nav__container {
+    grid-area: nav;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: rgb(126, 125, 125);
+  }
+  
+  .nav__container--items {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    list-style: none;
+    cursor: pointer;
+    justify-content: space-evenly;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+  .nav__container--item {
+    color: black;
+  }
+  
+  
+  
+  /* ------- INFO PERSONAL CONTAINER ------------*/
+  
+  .info__container {
+    grid-area: info;
+    border-left: 1px solid black;
+    text-align: center;
+    background-color: rgb(212, 210, 210);
+  }
+  
+  #img {
+    margin-top: 30px;
+    width: 50%;
+    background: rgba(114, 113, 113, 0.5);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 50%;
+    border: 3px solid grey;
+  }
+  
+  
+  /* ------- LOOP DE JAVASCRIPT ------------*/
+  #loop_for {
+    text-align: start;
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  
+  /* ------- FIN DEL LOOP ------------*/
+  
+  #date {
+    margin-right: 10px;
+  }
+  
+  .info__container--personal {
+    margin-bottom: 10px;
+    margin-top: 60px;
+  } 
+  
+  .info__container--redes {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .redes__container {
+    display: grid;
+    grid-template-columns: 2fr 4fr 2fr 4fr;
+    grid-template-areas: 
+    "logo_insta insta_link logo_twitter twitter_link"
+    "logo_linke linke_link logo_tiktok tiktok_link"
+    "logo_face face_link logo_snapchat snapchat_link";
+    grid-template-rows: 30px 30px 30px;
+    row-gap: 10px;
+  }
+  
+  .redes__container--img {
+    cursor: pointer;
+    margin-left: 15px;
+    width: 30%;
+  }
+  
+  .redes__container > p {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+  }
+  
+  #insta {
+    grid-area:logo_insta;
+  }
+  
+  #linke {
+    grid-area:logo_linke;
+  }
+  
+  #face {
+    grid-area:logo_face;
+  }
+  
+  #p_insta {
+    grid-area:insta_link;
+  }
+  
+  #p_linke {
+    grid-area:linke_link;
+  }
+  
+  #p_face {
+    grid-area:face_link;
+    margin-left: 0;
+  }
+  
+  #twit {
+    grid-area:logo_twitter;
+  }
+  
+  #tik {
+    grid-area:logo_tiktok;
+  }
+  
+  #snap {
+    grid-area:logo_snapchat;
+  }
+  
+  #p_twit {
+    grid-area:twitter_link;
+  }
+  
+  #p_tik {
+    grid-area:tiktok_link;
+  }
+  
+  #p_snap {
+    grid-area:snapchat_link;
+    margin-left: 0;
+  }
+  
+  
+  /* ------- EMPLEOS CONTAINER ------------*/
+  
+  .empleos__container {
+    grid-area: empleos;
+    border-right: 1px solid black;
+    padding-bottom: 20px;
+    
+  }
+  
+  .empleos__container--header {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    font-size: 25px;
+    background-color: rgb(175, 175, 175);
+    margin-right: 20px;
+    margin-left: 20px;
+    text-align: end;
+    margin-top:15px;
+    margin-bottom: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+  }
+  
+  .empleos__container--title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0;
+    padding-right: 0;
+    font-size: 35px;
+  }
+  
+  .list__title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  #empleos_icon {
+    margin-left: 15px;
+  }
+  
+  
+  .empleos__container > ul {
+    margin-left: 30px;
+  }
+  
+  .titulo {
+    margin-left: 30px;
+  }
+  
+  .info {
+    margin-left: 60px;
+  }
+  
+  
+  
+  
+  /* ------- ESTUDIOS CONTAINER ------------*/
+  
+  
+  .estudios__container {
+    grid-area: estudios;
+    border-right: 1px solid black;
+    padding-bottom: 20px;
+  }
+  
+  .estudios__container--header {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    font-size: 25px;
+    background-color: rgb(175, 175, 175);
+    margin-right: 20px;
+    margin-left: 20px;
+    text-align: end;
+    margin-top:15px;
+    margin-bottom: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+  }
+  
+  .estudios__container--title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0;
+    padding-right: 0;
+    font-size: 35px;
+  }
+  
+  #estudios_icon {
+    margin-left: 15px;
+    }
+  
+    .estudios__container > ul {
+    margin-left: 40px;
+    }
+  
+  
+    
+  
+  /* ------- FOOTER CONTAINER ------------*/
+  
+  .footer__container {
+    grid-area: footer;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom:1px solid black ;
+    height: 35vh;
+  
+  }
+  
+  .footer__container--header {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    font-size: 25px;
+    background-color: rgb(175, 175, 175);
+    margin-right: 20px;
+    margin-left: 20px;
+    text-align: end;
+    margin-top:15px;
+    margin-bottom: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+  }
+  
+  .footer__container--title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0;
+    padding-right: 0;
+    font-size: 35px;
+    }
+  
+  #habilidades_icon {
+    margin-left: 15px;
+    }
+  
+  .inputs {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-areas: 
+    "idiomas informatica deportes pasiones";
+    margin-top: 40px;
+  }
+  
+  #hobbies {
+    grid-area: hobbies;
+    width: 50%;
+    margin: auto;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgb(63, 63, 247);
+    color: white;
+    cursor: pointer;
+  }
+  
+  #idiomas {
+    grid-area: idiomas;
+    width: 50%;
+    margin: auto;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgb(63, 63, 247);
+    color: white;
+    cursor: pointer;
+  }
+  
+  #informatica {
+    grid-area: informatica;
+    width: 50%;
+    margin: auto;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgb(63, 63, 247);
+    color: white;
+    cursor: pointer;
+  }
+  
+  #deportes {
+    grid-area: deportes;
+    width: 50%;
+    margin: auto;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgb(63, 63, 247);
+    color: white;
+    cursor: pointer;
+  }
+  
+  #pasiones {
+    grid-area: pasiones;
+    width: 50%;
+    margin: auto;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgb(63, 63, 247);
+    color: white;
+    cursor: pointer;
+  }
+  
+  .list__items {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    list-style: none;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
+  
+  
+  
+  
+  
+  
+  
+  
